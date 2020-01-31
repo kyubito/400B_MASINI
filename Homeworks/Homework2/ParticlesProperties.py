@@ -35,10 +35,11 @@ print(ParticleInfo('MW_000.txt', 2, 99)) # pRint statement
 Mdistance, Mvel, mass = ParticleInfo('MW_000.txt', 2, 99)
 
 #define a new distance to convert the unit from Kpc to Lyr
-Mdistance2 = Mdistance.to(u.lightyear)
+Mdistance2 = np.around(Mdistance.to(u.lightyear), decimals=3)
 
 print(Mdistance2) #print statement
 
 # The values we get for 1,2,3 and 4 are :
 #(<Quantity 4.24484787 kpc>, <Quantity 312.1354934 km / s>, <Quantity 0.00394985 solMass>)
 #13844.842053597764 lyr
+#13844.842 lyr This is the rounded value to 3 decimal places.
