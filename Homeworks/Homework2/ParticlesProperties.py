@@ -29,7 +29,7 @@ def ParticleInfo(X, Partype, number) :
 
     return Mdistance, Mvel, mass #return the needed values
 
-print(ParticleInfo('MW_000.txt', 2, 99)) # pRint statement
+print(ParticleInfo('MW_000.txt', 2, 99)) # Print statement
 
 # setting the values that correspond to the function itself
 Mdistance, Mvel, mass = ParticleInfo('MW_000.txt', 2, 99)
