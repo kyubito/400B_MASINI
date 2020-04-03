@@ -51,7 +51,7 @@ class CenterOfMass:
         return Acom, Bcom, Ccom
 
 
-    def COM_P(self, delta):
+    def COM_P(self, delta, VolDec):
     # Function to specifically return the center of mass position and velocity
     # input:
     #        particle type (1,2,3)
@@ -82,7 +82,7 @@ class CenterOfMass:
 
         # find the max 3D distance of all particles from the guessed COM
         # will re-start at half that radius (reduced radius)
-        RMAX = max(RNEW)/2.0
+        RMAX = max(RNEW)/VolDec
 
         # pick an initial value for the change in COM position
         # between the first guess above and the new one computed from half that volume
@@ -133,7 +133,7 @@ class CenterOfMass:
             # Before loop continues, reset : RMAX, particle separations and COM
 
             # reduce the volume by a factor of 2 again
-            RMAX = RMAX/2.0
+            RMAX = RMAX/VolDec
             # check this.
             #print ("maxR", RMAX)
 
